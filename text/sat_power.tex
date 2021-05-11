@@ -25,7 +25,7 @@
 
 \usepackage{cogsci}
 
-%\cogscifinalcopy % Uncomment this line for the final submission 
+\cogscifinalcopy % Uncomment this line for the final submission 
 
 
 \usepackage{pslatex}
@@ -275,16 +275,16 @@ Importantly, our findings suggest that the statistical power in typical SAT expe
 % 
 % 
 % We used the Bayesian information criterion (BIC) for model selection and the BIC approximation to the Bayes factor for inference \cite{Wagenmakers:2007}. The BIC was computed according to equation \ref{eq:BIC}, where $log~L$ is the maximized log-likelihood of the data under a given model, $n_{par}$ is the number of free parameters in the model, and $n_{obs}$ is the number of observations.
-% The BIC decreases with increasing log-likelihood of the data and increases with the number of free parameters. The amount of free parameter penalty depends on the amount of data ($n_{obs}$). The model with the smallest BIC provides the most parsimonious fit to the data, and maximizes the generalizability of a model \cite{PittMyung:2002}. Because the responses on one trial were highly correlated, we set $n_{obs}$ to the number of trials for one participant, instead of the actual number of data points. 
+% The BIC decreases with increasing log-likelihood of the data and increases with the number of free parameters. The amount of free parameter penalty depends on the amount of data ($n_{obs}$). The model with the smallest BIC provides the most parsimonious fit to the data, and maximizes the generalizability of a model \cite{PittMyung:2002}. Because the responses on one trial were highly correlated, we set $n_{obs}$ to the number of trials for one participant, instead of the actual number of data points.
 % 
-%  
+% 
 % \begin{equation}
 % \label{eq:BIC}
 % BIC = -2\cdot log~L + log(n_{obs})\cdot n_{par}
 % \end{equation}
 % 
-% For formal inference, we used the BIC approximation to the Bayes factor according to equation \ref{eq:BF} \cite{Wagenmakers:2007}, where $BIC_{1}$ and $BIC_{2}$ are the BIC values of the models to be compared. The Bayes factor quantifies the evidence in favor of model 1 over model 2. We combined individual participants' Bayes factors for each comparison into group Bayes factors (GBF) as well as average Bayes factors (ABF), as suggested by \citeA{StephanPenny:2006}. The GBF for comparison of models 1 and 2 was computed according to equation \ref{eq:GBF} as the product of all participants' Bayes factors for that comparison (where $k$ is an index over participants). 
-% Like a single Bayes factor, a GBF can be interpreted as the ratio of evidence in favor of model 1 and the evidence in favor of model 2. By convention \cite<e.g.,>{Raftery:1995}, the evidence is considered \textit{weak} when $1 < BF < 3$, \textit{positive} when $3 < BF < 20$, \textit{strong} when $20 < BF < 150$, and \textit{very strong} positive when $BF > 150$. We chose to present $log$ GBFs ($l$GBFs) here because the value of the GBF tended to become rather large. On a log scale, values above $1$ can be considered positive evidence, and a values above $3$ and $5$, respectively, can be considered \textit{strong} and \textit{very strong} evidence. 
+% For formal inference, we used the BIC approximation to the Bayes factor according to equation \ref{eq:BF} \cite{Wagenmakers:2007}, where $BIC_{1}$ and $BIC_{2}$ are the BIC values of the models to be compared. The Bayes factor quantifies the evidence in favor of model 1 over model 2. We combined individual participants' Bayes factors for each comparison into group Bayes factors (GBF) as well as average Bayes factors (ABF), as suggested by \citeA{StephanPenny:2006}. The GBF for comparison of models 1 and 2 was computed according to equation \ref{eq:GBF} as the product of all participants' Bayes factors for that comparison (where $k$ is an index over participants).
+% Like a single Bayes factor, a GBF can be interpreted as the ratio of evidence in favor of model 1 and the evidence in favor of model 2. By convention (e.g., Raftery:1995), the evidence is considered \textit{weak} when $1 < BF < 3$, \textit{positive} when $3 < BF < 20$, \textit{strong} when $20 < BF < 150$, and \textit{very strong} positive when $BF > 150$. We chose to present $log$ GBFs ($l$GBFs) here because the value of the GBF tended to become rather large. On a log scale, values above $1$ can be considered positive evidence, and a values above $3$ and $5$, respectively, can be considered \textit{strong} and \textit{very strong} evidence.
 % %\TODO{ Read Raftey(1995), which explains this approximation in more detail. Copy is in the literature folder.}
 % 
 % 
@@ -299,7 +299,7 @@ Importantly, our findings suggest that the statistical power in typical SAT expe
 % \end{equation}
 % 
 % 
-% To complement the GBF, \citeA{StephanPenny:2006} suggest providing an average Bayes factor (ABF), which is the geometric mean of the individual Bayes factors (and therefore $ABF_{12} = \sqrt[N]{GBF_{12}}$, where $N$ is number of participants). In contrast to the GBF, the ABF is not dependent on the number of participants and can thus be more easily compared across different experiments. It can be interpreted as the average participant-level Bayes factor contributing to the GBF. 
+% To complement the GBF, \citeA{StephanPenny:2006} suggest providing an average Bayes factor (ABF), which is the geometric mean of the individual Bayes factors (and therefore $ABF_{12} = \sqrt[N]{GBF_{12}}$, where $N$ is number of participants). In contrast to the GBF, the ABF is not dependent on the number of participants and can thus be more easily compared across different experiments. It can be interpreted as the average participant-level Bayes factor contributing to the GBF.
 % 
 % We used the Bayes factor-based comparisons for models with constrained differences between asymptotes and intercepts. We supplement these comparisons with the analysis of coefficient estimates from unconstrained fully saturated models.
 
